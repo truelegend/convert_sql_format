@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # mysqldump -pmavenir --skip-opt --skip-triggers --skip-routines --skip-add-locks --skip-comments --no-create-info --complete-insert --compact mnode_cm_data > dump_only_data.sql
+# in dump_only_data.sql it will be insert sentence like this: INSERT INTO `Act_Elem` (`oid_index`, `fkName`, `value`, `fkAction`) VALUES (0,2,'+',0);
+# and this convert script will transfer it to：INSERT INTO `Act_Elem` set `oid_index`=0, `fkName`=2, `value`='+', `fkAction`=0;
 
 function usage
 {
