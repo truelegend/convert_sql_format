@@ -7,7 +7,6 @@
 function usage
 {
     echo -e "\e[1;33m usage:\e[0m\e[1;32m $0 origin.sql \e[0m \n \e[0m"
-
 }
 
 function convert_line
